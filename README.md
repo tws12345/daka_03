@@ -66,7 +66,8 @@
     检测范围
     except Exception[as reason]:    
     出现异常后的处理代码
-
+    
+    例：
     try - except - else 
     dict1 = {'a': 1, 'b': 2, 'v': 22}
     try:
@@ -105,6 +106,13 @@
         print('An exception flew by!')
     
     # An exception flew by!
+
+7.小总结
+    
+    三个try 语句的区别
+    try - except 语句指出异常内容，跳过异常，继续执行后面的程序
+    try - except - finally 语句，不管 try 子句里面有没有发生异常， finally 后面的程序都会执行
+    try - except - else 语句，当try中的内容有异常时，就不执行else，没有异常才执行else里面的程序
 
 7.练习题：猜数字游戏
 
