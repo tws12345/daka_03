@@ -6,7 +6,7 @@
     常处理程序将被启动，从而恢复程序的正常运行。
     如：
 
-1. Python 标准异常总结
+1.Python 标准异常总结
 
     BaseException：所有异常的 基类
     Exception：常规异常的 基类
@@ -46,21 +46,21 @@
 
 
 
-2. Python标准警告总结
+2.Python标准警告总结
 
-Warning：警告的基类
-DeprecationWarning：关于被弃用的特征的警告
-FutureWarning：关于构造将来语义会有改变的警告
-UserWarning：用户代码生成的警告
-PendingDeprecationWarning：关于特性将会被废弃的警告
-RuntimeWarning：可疑的运行时行为(runtime behavior)的警告
-SyntaxWarning：可疑语法的警告
-ImportWarning：用于在导入模块过程中触发的警告
-UnicodeWarning：与Unicode相关的警告
-BytesWarning：与字节或字节码相关的警告
-ResourceWarning：与资源使用相关的警告
+    Warning：警告的基类
+    DeprecationWarning：关于被弃用的特征的警告
+    FutureWarning：关于构造将来语义会有改变的警告
+    UserWarning：用户代码生成的警告
+    PendingDeprecationWarning：关于特性将会被废弃的警告
+    RuntimeWarning：可疑的运行时行为(runtime behavior)的警告
+    SyntaxWarning：可疑语法的警告
+    ImportWarning：用于在导入模块过程中触发的警告
+    UnicodeWarning：与Unicode相关的警告
+    BytesWarning：与字节或字节码相关的警告
+    ResourceWarning：与资源使用相关的警告
 
-3. try - except 语句
+3.try - except 语句
 
     try:
     检测范围
@@ -78,7 +78,7 @@ ResourceWarning：与资源使用相关的警告
     else:
         print(x)
 
-4. try - except - finally 语句
+4.try - except - finally 语句
 
     try:
         检测范围
@@ -87,7 +87,7 @@ ResourceWarning：与资源使用相关的警告
     finally:
         无论如何都会被执行的代码
 
-5. try - except - else 语句
+5.try - except - else 语句
 
     try:
         检测范围
@@ -96,7 +96,7 @@ ResourceWarning：与资源使用相关的警告
     else:
         如果没有异常执行这块代码
 
-6. raise语句
+6.raise语句
 
     Python 使用raise语句抛出一个指定的异常
         try:
@@ -106,26 +106,26 @@ ResourceWarning：与资源使用相关的警告
     
     # An exception flew by!
 
-练习题：1、猜数字游戏
+7.练习题：猜数字游戏
 
-import random
-rrr=(random.randint(0,100))
-i=1
-print("猜测一个0到100之间的整数\n第1次猜，请输入一个整型数字：")
-while 1: 
-    try:
-        x= int(input())
-    except ValueError:
-        print('输入无效')
+    import random
+    rrr=(random.randint(0,100))
+    i=1
+    print("猜测一个0到100之间的整数\n第1次猜，请输入一个整型数字：")
+    while 1: 
+        try:
+            x= int(input())
+        except ValueError:
+            print('输入无效')
+            i+=1
+            print("这是你第%d次猜"%i)
+            continue
+        if x == rrr:
+            print("恭喜你猜到了这个数是",rrr)
+            break
+        elif x < rrr:
+            print("太小")
+        else:
+            print("太大")
         i+=1
         print("这是你第%d次猜"%i)
-        continue
-    if x == rrr:
-        print("恭喜你猜到了这个数是",rrr)
-        break
-    elif x < rrr:
-        print("太小")
-    else:
-        print("太大")
-    i+=1
-    print("这是你第%d次猜"%i)
