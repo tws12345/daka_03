@@ -44,7 +44,7 @@
     UnicodeEncodeError：Unicode编码错误导致的异常
     UnicodeTranslateError：Unicode转换错误导致的异常
 
-
+异常体系内部还有有层次关系
 
 2.Python标准警告总结
 
